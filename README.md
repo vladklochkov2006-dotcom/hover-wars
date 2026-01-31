@@ -1,57 +1,36 @@
-# 🌊 Prediction Sea
+High-frequency 3D naval combat fully integrated with the Linera Protocol.
 
-> **Surf the infinite ocean. Predict the future. Survive the anomalies.**
+Hover Wars proves that real-time, arcade-style multiplayer gaming is possible on Web3. We utilize Linera’s micro-chain architecture to solve the latency bottleneck, allowing for high-speed physics and combat while maintaining trustless state verification.
 
-**Prediction Sea** is an atmospheric Web3 racing game where players pilot a high-speed hover-boat across an endless procedural ocean. The game blends skill-based "flow state" exploration with real-time prediction markets.
+🏗️ Architecture & Smart Contracts
+We have designed and implemented a hybrid architecture that leverages the speed of micro-chains for gameplay and the security of the main chain for settlement.
 
-![License](https://img.shields.io/badge/license-MIT-blue)
-![Tech](https://img.shields.io/badge/tech-React%20%7C%20Three.js%20%7C%20Vite-purple)
-![Status](https://img.shields.io/badge/status-Alpha-orange)
+Trustless Match Resolution: The game logic is not just client-side; match outcomes are verified via Rust-based smart contracts.
 
-## 🎮 Gameplay Features
+On-Chain State Settlement: At the end of every match, the final state (Winner, Score, MVP) is committed to the blockchain, creating an immutable history of battles.
 
-* **Hover-Physics:** Satisfying drift mechanics and physics-based movement.
-* **Infinite Ocean:** A procedural world that never ends, featuring day/night cycles and dynamic weather.
-* **Anomalies:**
-    * 🔴 **Neon Rings:** Fly through for speed boosts.
-    * 🌊 **Light Waves:** Avoid these to maintain momentum.
-    * 🌫️ **Fog Zones:** Low visibility challenges.
-* **Prediction Islands:** Interactive hubs that represent real-world markets (Crypto, Sports). Approach an island to place predictions via the UI overlay.
+Asset & Stat Ownership: Player achievements and "Oil" resources are tokenized assets owned by the player, secured by the Linera network.
 
-## 🛠 Tech Stack
+Zero-Latency Gameplay: By utilizing the optimistic execution model of Linera, we achieve 60 FPS gameplay synchronization that feels indistinguishable from Web2 servers.
 
-* **Core:** React, TypeScript, Vite
-* **3D Engine:** Three.js, React Three Fiber (@react-three/fiber)
-* **Helpers:** @react-three/drei
-* **Styling:** TailwindCSS (UI Overlay)
+⚔️ The Gameplay Loop
+The core objective is Resource Supremacy.
 
-## 🚀 Getting Started
+Capture the Oil: Teams compete to secure the oil barrel from the central rig.
 
-1.  **Clone the repo:**
-    ```bash
-    git clone [https://github.com/YOUR_USERNAME/prediction-sea.git](https://github.com/YOUR_USERNAME/prediction-sea.git)
-    ```
+Escort & Defend: The carrier becomes the primary target. Team coordination is essential.
 
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
+Delivery: Successfully transporting oil to the base updates the on-chain match score.
 
-3.  **Run development server:**
-    ```bash
-    npm run dev
-    ```
+MVP Calculation: Our system tracks complex metrics (Goals, Kills, Survival Time) to algorithmically determine the Most Valuable Pilot, minting this status to their profile.
 
-4.  Open `http://localhost:5173` (or your local port) to play.
+⚙️ Tech Stack
+Blockchain Logic: Rust (Linera SDK, Wasm)
 
-## 🔮 Roadmap
+Frontend Engine: React + Vite
 
-- [x] Basic Hover-boat physics
-- [x] Infinite Grid/Ocean shader
-- [x] Anomaly generation system
-- [ ] Wallet Connection (Web3 Integration)
-- [ ] Real-time Market Data API
-- [ ] Sound Design & Synthwave Soundtrack
+3D Environment: Three.js / @react-three/fiber
 
----
-*Created with ❤️ and AI assistance.*
+Networking: Real-time event synchronization (Socket-based micro-chain simulation)
+
+Audio: Custom 3D Positional Audio engine
