@@ -1,36 +1,52 @@
-High-frequency 3D naval combat fully integrated with the Linera Protocol.
+# 🚁 HOVER WARS
 
-Hover Wars proves that real-time, arcade-style multiplayer gaming is possible on Web3. We utilize Linera’s micro-chain architecture to solve the latency bottleneck, allowing for high-speed physics and combat while maintaining trustless state verification.
+**High-frequency 3D naval combat fully integrated with the Linera Protocol.**
 
-🏗️ Architecture & Smart Contracts
-We have designed and implemented a hybrid architecture that leverages the speed of micro-chains for gameplay and the security of the main chain for settlement.
+> **Status:** Buildathon Submission  
+> **Core Tech:** Linera Micro-chains, React, Three.js, Rust
 
-Trustless Match Resolution: The game logic is not just client-side; match outcomes are verified via Rust-based smart contracts.
+---
 
-On-Chain State Settlement: At the end of every match, the final state (Winner, Score, MVP) is committed to the blockchain, creating an immutable history of battles.
+## 💡 The Concept
 
-Asset & Stat Ownership: Player achievements and "Oil" resources are tokenized assets owned by the player, secured by the Linera network.
+**Hover Wars** proves that real-time, arcade-style multiplayer gaming is possible on Web3. 
 
-Zero-Latency Gameplay: By utilizing the optimistic execution model of Linera, we achieve 60 FPS gameplay synchronization that feels indistinguishable from Web2 servers.
+Traditional blockchains suffer from latency bottlenecks that make fast-paced games impossible. We utilize **Linera’s micro-chain architecture** to solve this, enabling **60 FPS gameplay**, high-speed physics, and instant combat feedback while maintaining trustless state verification via smart contracts.
 
-⚔️ The Gameplay Loop
-The core objective is Resource Supremacy.
+---
 
-Capture the Oil: Teams compete to secure the oil barrel from the central rig.
+## 🏗️ Architecture & Smart Contracts
 
-Escort & Defend: The carrier becomes the primary target. Team coordination is essential.
+We have designed a hybrid architecture that leverages the optimistic execution of micro-chains for gameplay and the security of the main chain for final settlement.
 
-Delivery: Successfully transporting oil to the base updates the on-chain match score.
+### 🔗 Key Blockchain Integration:
+* **Trustless Match Resolution:** The game logic isn't just client-side validation; match outcomes are verified via **Rust-based smart contracts** on the Linera network.
+* **On-Chain State Settlement:** At the end of every match, the critical final state (Winner, Score, MVP) is committed to the blockchain, creating an immutable history of battles.
+* **Asset & Stat Ownership:** Player achievements and "Oil" resources are tokenized assets owned by the player, secured by the chain.
+* **Zero-Latency Experience:** By utilizing Linera's optimistic execution model, we achieve synchronization that feels indistinguishable from traditional Web2 servers.
 
-MVP Calculation: Our system tracks complex metrics (Goals, Kills, Survival Time) to algorithmically determine the Most Valuable Pilot, minting this status to their profile.
+---
 
-⚙️ Tech Stack
-Blockchain Logic: Rust (Linera SDK, Wasm)
+## ⚔️ The Gameplay Loop
 
-Frontend Engine: React + Vite
+The core objective is **Resource Supremacy**.
 
-3D Environment: Three.js / @react-three/fiber
+1.  🛢️ **Capture the Oil:** Teams compete to secure the oil barrel from the central rig.
+2.  🛡️ **Escort & Defend:** The carrier becomes the primary target. Team coordination is essential.
+3.  🏁 **Delivery:** Successfully transporting oil to the base updates the on-chain match score.
+4.  🏆 **MVP Calculation:** Our system tracks complex metrics (Goals, Kills, Survival Time) to algorithmically determine the *Most Valuable Pilot*, minting this status to their profile.
 
-Networking: Real-time event synchronization (Socket-based micro-chain simulation)
+---
 
-Audio: Custom 3D Positional Audio engine
+## ⚙️ Tech Stack
+
+| Component | Technology |
+| :--- | :--- |
+| **Blockchain Logic** | Rust (Linera SDK, Wasm) |
+| **Frontend Engine** | React + Vite |
+| **3D Environment** | Three.js / @react-three/fiber |
+| **Networking** | Real-time event synchronization |
+| **Audio** | Custom 3D Positional Audio Engine |
+
+
+> *Built for the Linera Buildathon. Redefining on-chain gaming speed.*
